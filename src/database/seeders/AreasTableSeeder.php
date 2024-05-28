@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AreasTableSeeder extends Seeder
 {
@@ -13,6 +14,17 @@ class AreasTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $area = [
+            'area' => '東京都'
+        ];
+        DB::table('areas')->insert($area);
+        $area = [
+            'area' => '大阪府'
+        ];
+        DB::table('areas')->insert($area);
+        $area = [
+            'area' => '福岡県'
+        ];
+        DB::table('areas')->insert($area);
     }
 }
