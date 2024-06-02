@@ -1,0 +1,48 @@
+body {
+    min-height:100%;
+    background-color: #eee;
+}
+.login-screen {
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+    background: #fff;
+    width: 350px;
+    margin: 100px 30%;
+}
+.ttl {
+    background: #3560f6;
+    border-radius: 5px;
+    padding: 1px;
+}
+.main-ttl{
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+.input-container {
+    margin-bottom: 10px;
+}
+input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+input[type="password"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+input[type="submit"] {
+    background: #3560f6;
+    color: #fff;
+    margin: 20px 0 0 200px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 10px;
+}
