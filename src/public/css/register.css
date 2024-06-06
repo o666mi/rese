@@ -42,7 +42,7 @@ input[type="password"] {
     outline: none;
     border-bottom: 1px solid;
 }
-input[type="submit"] {
+.register-link {
     background: #3560f6;
     color: #fff;
     margin: 20px 0 0 200px;
@@ -50,4 +50,5 @@ input[type="submit"] {
     border-radius: 5px;
     padding: 5px 12px;
     font-size: 10px;
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,10 @@ use App\Http\Controllers\AuthController;
 |
 */
 
+
+Route::post('/register', [AuthController::class, 'store']);
+
 Route::middleware('auth')->group(function () {
+    Route::get('/logout', [AuthController::class,'getLogout']);
     Route::get('/', [AuthController::class, 'index']);
 });

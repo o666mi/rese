@@ -36,6 +36,6 @@
         <div class="btn-container">
             <input type="submit" value="登録">
         </div>
-    </div>
-</form>
+    </form>
+</div>
 @endsection

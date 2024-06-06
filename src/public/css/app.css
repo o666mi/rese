@@ -1,5 +1,6 @@
 .header_inner {
     display: flex;
+    align-items: center;
     margin: 30px;
 }
 .header__logo {
@@ -35,3 +36,6 @@
   .nav_toggle i:nth-child(3) {
     bottom: 0;
   }
+.header__nav {
+    margin-left: auto;
+}

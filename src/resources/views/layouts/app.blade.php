@@ -20,6 +20,9 @@
         <a class="header__logo" href="/">
             Rese
         </a>
+        <div class="header__nav">
+            @yield('header')
+        </div>
     </div>
 </header>
 <main>
