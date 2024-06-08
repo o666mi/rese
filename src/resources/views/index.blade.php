@@ -30,9 +30,22 @@
         <input class="search-form__search-btn btn" type="submit" value="Search …">
     </div>
 </form>
+@endsection
+
+@section('main')
 <div class="shop">
-    <div class="shop__inner">
-        
+    <div class="grid__item">
+    @foreach ($shops as $shop)
+        <div class="shop__card">
+            <img src="{{ $shop->image_url }}" alt="Shop Image">
+            <h2 class="card__ttl">{{ $shop->name }}</h2>
+            <div class="card__tag">
+                <p class="card__area">#{{ $shop->area->area }}</p>
+                <p class="card__genre">#{{ $shop->genre->genre }}</p>
+            </div>
+            <a class="shop__detail-btn" href="/detail{{ $shop->id }}">詳しくみる</a>
+        </div>
+    @endforeach
     </div>
 </div>
 @endsection

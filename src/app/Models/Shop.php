@@ -11,13 +11,13 @@ class Shop extends Model
 
     protected $fillable = ['name','area_id','genre_id','overview','image_url'];
 
-    public function areas()
-        {
-            return $this->hasMany('App\Models\Area');
-        }
+    public function area()
+    {
+        return $this->belongsTo(Area::class, 'area_id');
+    }
 
-    public function genres()
-        {
-            return $this->hasMany('App\Models\Genre');
-        }
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genre_id');
+    }
 }
