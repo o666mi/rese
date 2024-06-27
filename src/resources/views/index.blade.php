@@ -35,7 +35,7 @@
 @section('main')
 <div class="shop">
     <div class="grid__item">
-    @foreach ($shops as $shop)
+    @foreach($shops as $shop)
         <div class="shop__card">
             <img src="{{ $shop->image_url }}" alt="Shop Image">
             <h2 class="card__ttl">{{ $shop->name }}</h2>
@@ -43,7 +43,16 @@
                 <p class="card__area">#{{ $shop->area->area }}</p>
                 <p class="card__genre">#{{ $shop->genre->genre }}</p>
             </div>
-            <a class="shop__detail-btn" href="/detail{{ $shop->id }}">詳しくみる</a>
+            <div class="click__btn">
+                <a class="shop__detail-btn" href="/detail{{ $shop->id }}">詳しくみる</a>
+                <!--<div>
+                    @if($shop->is_liked_by_auth_user())
+                        <a href="{{ route('/my-like/delete', ['id' => $shop->id]) }}" class="btn btn-success btn-sm"><i class="fa-solid fa-heart"></i></a>
+                    @else
+                        <a href="{{ route('/my-like', ['id' => $shop->id]) }}" class="btn btn-secondary btn-sm"><i class="fa-solid fa-heart"></i></a>
+                    @endif
+                </div>-->
+            </div>
         </div>
     @endforeach
     </div>

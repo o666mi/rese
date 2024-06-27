@@ -8,7 +8,7 @@
 @section('main')
 <div class="login-screen">
     <div class="ttl">
-        <h2 class="main-ttl">Registration</h2>
+        <h2 class="main-ttl">Login</h2>
     </div>
     <form action="/login" method="post">
         @csrf

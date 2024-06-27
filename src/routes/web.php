@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,16 @@ use App\Http\Controllers\ShopController;
 |
 */
 
-
-Route::post('/register', [AuthController::class, 'store']);
+Route::get('/', [ShopController::class, 'index']);
+Route::get('/detail{shop_id}', [ShopController::class, 'detail']);
+Route::post('register', [AuthController::class, 'store']);
+Route::post('/register/thanks', [ShopController::class, 'thanks']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/logout', [AuthController::class,'getLogout']);
-    Route::get('/', [AuthController::class, 'index']);
+    Route::get('/', [ShopController::class, 'index']);
+    Route::get('/my-page', [UserController::class, 'index']);
+    Route::post('/my-like', [UserController::class, 'storeLike']);
+    Route::post('/my-like/delete', [UserController::class, 'deleteLike']);
+    Route::post('/reservation', [UserController::class, 'storeReservation']);
+    Route::post('/reservation/delete', [UserController::class, 'deleteReservation']);
 });

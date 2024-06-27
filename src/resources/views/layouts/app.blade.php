@@ -12,12 +12,20 @@
 <body>
 <header class="header">
     <div class="header_inner">
-        <span class="nav_toggle">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-        <a class="header__logo" href="/">
+        <a href="#sidemenu" class="nav_toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+        <div id="sidemenu" class="nav__menu">
+            <form class="form" action="/logout" method="post">
+                <a href="#" class="close-btn">&times;</a>
+                <a href="/">Home</a>
+                <a href="/logout">Logout</a>
+                <a href="/my-page">Mypage</a>
+            </form>
+        </div>
+        <a class="header__logo" href="">
             Rese
         </a>
         <div class="header__nav">
@@ -30,3 +38,4 @@
   </main>
 </body>
 </html>
+

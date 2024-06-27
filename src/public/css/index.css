@@ -116,7 +116,12 @@ i {
 .card__area {
     margin-left: 15px;
 }
-.shop__card a {
+.click__btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.shop__detail-btn {
     background: #3560f6;
     color: #fff;
     text-decoration: none;
@@ -124,4 +129,7 @@ i {
     padding: 5px 20px;
     font-size: 10px;
     margin-left: 15px;
+}
+.shop__like-btn:active {
+    color: red;
 }
