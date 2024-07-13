@@ -29,16 +29,36 @@
                         <input type="date" name="date" class="form-date" value="{{ $today }}">
                     </div>
                     <div class="form-time">
-                        <input type="time" name="time" class="form-time">
+                        <select class="reservation__time">
+                            <option value="1">17:00</option>
+                            <option value="2">17:30</option>
+                            <option value="3">18:00</option>
+                            <option value="4">18:30</option>
+                            <option value="5">19:00</option>
+                            <option value="6">19:30</option>
+                            <option value="7">20:00</option>
+                            <option value="8">20:30</option>
+                            <option value="9">21:00</option>
+                        </select>
                     </div>
-                    <select class="form-reservation">
-                        <option value="1">1名</option>
-                        <option value="1">2名</option>
-                        <option value="1">3名</option>
-                        <option value="1">4名</option>
-                        <option value="1">5名</option>
-                    </select>
+                    <div class="form-number">
+                        <select class="reservation__number">
+                            <option value="1">1名</option>
+                            <option value="2">2名</option>
+                            <option value="3">3名</option>
+                            <option value="4">4名</option>
+                            <option value="5">5名</option>
+                        </select>
+                    </div>
                 </form>
+            </div>
+            <div class="reservation-content">
+                <div class="reservation-content__card">
+                    <p class="reservation__shop"></p>
+                    <p class="reservation__date"></p>
+                    <p class="reservation__time"></p>
+                    <p class="reservation__number"></p>
+                </div>
             </div>
         </div>
     </div>

@@ -16,3 +16,58 @@
 .card__comment {
     font-size: 17px;
 }
+
+.reservation__item {
+    width: 50%;
+}
+.shop-reservation__card {
+    margin: 30px;
+    background: #3560F6;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
+.reservation__ttl {
+    color: #fff;
+}
+select {
+    appearance: none;
+    width: 100%;
+    padding: 3px 5px;
+    border: none;
+    outline: 0;
+    background: #fff;
+    background-image: none;
+    text-indent: 0.01px;
+    cursor: pointer;
+}
+.form-time {
+    position: relative;
+}
+.form-time::before {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-width: 10px 5px 0 5px;
+    border-style: solid;
+    border-color: #eee transparent transparent transparent;
+    content: "";
+    pointer-events: none;
+}
+.form-number {
+    position: relative;
+}
+.form-number::before {
+    position: absolute;
+    top: 9px;
+    right: 5px;
+    width: 0;
+    height: 0;
+    border-width: 10px 5px 0 5px;
+    border-style: solid;
+    border-color: #eee transparent transparent transparent;
+    content: "";
+    pointer-events: none;
+}
